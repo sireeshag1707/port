@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+        background-color:black;
+}
+header{
+         height:5%;
+		 width:100%;
+		 background-color:MediumSlateBlue ;
+}
+.topnav{
+          overflow:hidden;
+          height:10%;
+		  width:100%;
+		  background-color:pink;
+}
+.img{
+        height:80%;
+		width:80%;
+}
+.img1{
+        height:90%;
+		width:85%;
+}
+.img2{
+        height:100%;
+		width:100%;
+}
+.content{
+          background-color:white;
+		  padding:20px;
+		  width:100%;
+		  height:80%;
+}
+@media screen and(max-width:900px){
+.colomn{
+         width:50%;
+}
+}
+@media screen and(max-width:600px){
+.column{
+         width:100%;
+}
+}
+.column{
+        float:left;
+		width:33%;
+}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none; height=50%; width=100%;}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 100%)(max-height: 100%) {
+  .text {font-size: 11px}
+}
+.footer{
+      background-color:purple;
+	  height:20%;
+	  width:100%;
+}
+</style>
+</head>
+<body>
+<header>
+<center><h1 style=color:white><i>HOTELS</i></h1></center>
+</header>
+<div class="topnav">
+<h5>about home booking availability</h5>
+</div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="5.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="4.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="6.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="7.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="8.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<div class="column">
+<div class="content">
+<img class="img" src="11.jpg" style="height=50%" "width=20%">
+<p>The Central Hotel is a smaller four-star business hotel, 
+which offers excellent location and full comfort. 
+The hotel is only a step away from the main bus and railway stations. 
+The sights of Ljubljana and the old city centre are accessible on foot.
+ The hotel has 71 comfortable rooms and 3 suites.
+ If you travel by car you can use the parking garage in close vicinity of the hotel.</p>
+ </div>
+ </div>
+ <div class="column">
+<div class="content">
+<img class="img1" src="13.jpg" style="height=60%" "width=20%">
+<p>The Central Hotel is a smaller four-star business hotel, 
+which offers excellent location and full comfort. 
+The hotel is only a step away from the main bus and railway stations. 
+The sights of Ljubljana and the old city centre are accessible on foot.
+ The hotel has 71 comfortable rooms and 3 suites.
+ If you travel by car you can use the parking garage in close vicinity of the hotel.</p>
+ </div>
+ </div>
+ <div class="column">
+<div class="content">
+<img class="img2" src="12.jpg" style="width=100%">
+<p>The Central Hotel is a smaller four-star business hotel, 
+which offers excellent location and full comfort. 
+The hotel is only a step away from the main bus and railway stations. 
+The sights of Ljubljana and the old city centre are accessible on foot.
+ The hotel has 71 comfortable rooms and 3 suites.
+ If you travel by car you can use the parking garage in close vicinity of the hotel.</p>
+ </div>
+ </div>
+  <img src="3.jpg">
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 1000);
+}
+</script>
+<div class="footer">
+<p></p>
+</div>
+</body>
+</html> 
